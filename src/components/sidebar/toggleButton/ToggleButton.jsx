@@ -2,8 +2,25 @@ import { motion } from "framer-motion";
 
 const ToggleButton = ({ setOpen }) => {
   return (
-    <button onClick={() => setOpen((prev) => !prev)}>
-      <svg width="23" height="23" viewBox="0 0 23 23">
+    <button
+      onClick={() => setOpen((prev) => !prev)}
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        padding: '10px', // Adjust padding as needed
+        border: 'none',
+        background: 'transparent',
+        cursor: 'pointer',
+        outline: 'none', // Remove outline on focus
+      }}
+    >
+      <svg
+        width="23"
+        height="23"
+        viewBox="0 0 21 21"
+        style={{ display: 'block' }}
+      >
         <motion.path
           strokeWidth="3"
           stroke="black"
