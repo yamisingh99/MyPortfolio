@@ -1,0 +1,107 @@
+@import "../../app.scss";
+
+.contact {
+  height: 100%;
+  max-width: 1366px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  // Media query for mobile screens
+  @include mobile {
+    width: 100%;
+    padding: 10px;
+    flex-direction: column;
+    margin: 0; // Ensure no extra margins are added on mobile
+  }
+
+  .textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include mobile {
+      text-align: center;
+      align-items: center;
+      margin-top: 60px; // Add top margin for mobile
+      margin-bottom: 20px; // Add bottom margin for mobile
+    }
+
+    h1 {
+      font-size: 100px;
+      line-height: 88px;
+
+      @include mobile {
+        font-size: 36px; // Adjust font size for mobile
+      }
+    }
+
+    span {
+      font-weight: 300;
+    }
+  }
+
+  .formContainer {
+    flex: 1;
+    position: relative;
+
+    @include mobile {
+      padding: 10px;
+      width: 100%;
+      margin-top: 0; // Remove top margin for mobile
+      margin-bottom: 20px; // Add bottom margin for mobile
+    }
+
+    .phoneSvg {
+      stroke: orange;
+      position: absolute;
+      margin: auto;
+      z-index: -1;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px; // Increase gap between fields
+
+      .txt-area{
+        @include mobile{
+          height: 50px;
+
+        }
+      }
+      input,
+      textarea {
+        padding: 10px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        border-radius: 5px;
+
+        @include mobile {
+          padding: 10px; // Add padding for mobile
+          margin-top: 10px; // Margin between fields
+        }
+      }
+
+      button {
+        padding: 12px; // Adjust padding for mobile
+        border: none;
+        background-color: orange;
+        color: white;
+        cursor: pointer;
+        font-weight: 500;
+        text-align: center;
+        border-radius: 5px; // Ensure button has rounded corners
+
+        @include mobile {
+          padding: 12px; // Ensure button has enough padding on mobile
+          margin-top: 10px; // Space between button and other elements
+          width: 100%; // Make button full width on mobile
+        }
+      }
+    }
+  }
+}
